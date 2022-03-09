@@ -3,6 +3,7 @@ from django.db import models
 
 # Create your models here.
 class MonthTable(models.Model):
+    tittless = models.CharField(max_length=20)
     jan = models.BooleanField(editable=True)
     feb = models.BooleanField(editable=True)
     march = models.BooleanField(editable=True)

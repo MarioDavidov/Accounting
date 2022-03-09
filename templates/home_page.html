@@ -5,6 +5,47 @@
     <title>Title</title>
 </head>
 <body>
-    <section>it works, its a good start</section>
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'home_two' %}"> Home_two</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+            <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+            <label for="date">title{{ form.tittless }}</label><br>
+            <br>
+            <label for="date">January{{ form.jan }}</label><br>
+            <br>
+            <label  for="title">February {{ form.feb }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">March: {{ form.march }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">April: {{ form.april }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">May: {{ form.may }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">June: {{ form.june }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">July: {{ form.july }}</label><br>
+                <br>
+            <label class="inputs" for="exercise">August: {{ form.august }}</label><br>
+                <br>
+            <label class="inputs" for="exercise">September: {{ form.sept }}</label><br>
+                <br>
+            <label class="inputs" for="exercise">October: {{ form.oct }}</label><br>
+                <br>
+            <label class="inputs" for="exercise">November: {{ form.nove }}</label><br>
+                <br>
+            <label class="inputs" for="exercise">December: {{ form.dec }}</label><br>
+
+            <input type="submit" value="btn">
+            {% csrf_token %}
+
+        </form>
+
+
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'home' %}"> Home</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<section>
+                {% for mtable in mtable %}
+
+                     <p>1: <span class="form-out">{{ mtable.tittless }}</span></p>
+                    <label>1: {{ mtable.jan }}</label>
+                    <p>2:<span class="form-out"> {{mtable.feb }}</span></p>
+                    <p>3: <span class="form-out">{{ mtable.march }}</span></p>
+                    <p>4:<span class="form-out"> {{ mtable.april }}</span></p>
+                     <p>5: <span class="form-out">{{ mtable.may }}</span></p>
+                    <p>6:<span class="form-out"> {{ mtable.june }}</span></p>
+                     <p>7: <span class="form-out">{{ mtable.july }}</span></p>
+                    <p>8:<span class="form-out"> {{ mtable.august }}</span></p>
+                     <p>9: <span class="form-out">{{ mtable.sept }}</span></p>
+                    <p>10:<span class="form-out"> {{mtable.oct }}</span></p>
+                     <p>11: <span class="form-out">{{ mtable.nove }}</span></p>
+
+
+
+        {% endfor %}
+</section>
+</body>
+</html>
