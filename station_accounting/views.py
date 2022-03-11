@@ -6,8 +6,10 @@ from station_accounting.models import MonthTable
 
 def home_page(request):
     if request.method == 'GET':
+        mtable = MonthTable.objects.all()
         context = {
             'form': AccForm(),
+            'mtable': mtable,
         }
         return render(request, 'home_page.html', context)
     else:
