@@ -4,8 +4,8 @@ from django.db import models
 # Create your models here.
 class MonthTable(models.Model):
     tittless = models.CharField(max_length=20)
-    jan = models.BooleanField(editable=True)
-    feb = models.BooleanField(editable=True)
+    jan = models.BooleanField()
+    feb = models.BooleanField()
     march = models.BooleanField(editable=True)
     april = models.BooleanField(editable=True)
     may = models.BooleanField(editable=True)
