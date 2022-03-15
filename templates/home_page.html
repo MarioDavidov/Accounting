@@ -19,63 +19,150 @@
     </nav>
 </header>
             <form class="form_section" action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
-            <label for="date">Име {{ form.tittless }}</label><br>
+            <label for="name">Име {{ form.tittless }}</label><br>
             <br>
-            <label for="date">Януари {{ form.jan }}</label><br>
+            <label for="mesec">Януари {{ form.jan }}</label><br>
             <br>
-            <label  for="title">Февруари {{ form.feb }}</label><br>
+            <label  for="mesec">Февруари {{ form.feb }}</label><br>
             <br>
-            <label class="inputs" for="exercise">Март {{ form.march }}</label><br>
+            <label class="inputs" for="mesec">Март {{ form.march }}</label><br>
             <br>
-            <label class="inputs" for="exercise">Април {{ form.april }}</label><br>
+            <label class="inputs" for="mesec">Април {{ form.april }}</label><br>
             <br>
-            <label class="inputs" for="exercise">Май {{ form.may }}</label><br>
+            <label class="inputs" for="mesec">Май {{ form.may }}</label><br>
             <br>
-            <label class="inputs" for="exercise">Юни {{ form.june }}</label><br>
+            <label class="inputs" for="mesec">Юни {{ form.june }}</label><br>
             <br>
-            <label class="inputs" for="exercise">Юли {{ form.july }}</label><br>
+            <label class="inputs" for="mesec">Юли {{ form.july }}</label><br>
                 <br>
-            <label class="inputs" for="exercise">Август {{ form.august }}</label><br>
+            <label class="inputs" for="mesec">Август {{ form.august }}</label><br>
                 <br>
-            <label class="inputs" for="exercise">Септември {{ form.sept }}</label><br>
+            <label class="inputs" for="mesec">Септември {{ form.sept }}</label><br>
                 <br>
-            <label class="inputs" for="exercise">Октомври {{ form.oct }}</label><br>
+            <label class="inputs" for="mesec">Октомври {{ form.oct }}</label><br>
                 <br>
-            <label class="inputs" for="exercise">Ноември {{ form.nove }}</label><br>
+            <label class="inputs" for="mesec">Ноември {{ form.nove }}</label><br>
                 <br>
-            <label class="inputs" for="exercise">Декември {{ form.dec }}</label><br>
+            <label class="inputs" for="mesec">Декември {{ form.dec }}</label><br>
 
-            <input type="submit" value="btn">
+            <input type="submit" value="Запази">
             {% csrf_token %}
 
         </form>
 
-<section>
+<section class="employee_list">
 
     {% for mtable in mtable %}
         <section class="month_section">
 
-                     <p> Име : {{ mtable.tittless }}</p>
+            <p class="employee_name">{{ mtable.tittless }}</p>
+        <section>
+            <p>Януари</p>
             {% if mtable.jan == True %}
-                <p>OKAy</p>
-                <button href="#" aria-checked="true">{{ che }}</button>
+                <button href="#" aria-checked="true">{{ checked }}</button>
              {% else %}
-                <p>NOT OKAY</p>
-                <button href="#" aria-checked="true">{{ not }}</button>
+                <button href="#" aria-checked="true">{{ not_cheked }}</button>
             {% endif %}
-                    <p>Януари {{ mtable.jan }}</p>
-                    <p>Февруари {{mtable.feb }}</p>
-                    <p>Март {{ mtable.march }}</p>
-                    <p>Април {{ mtable.april }}</p>
-                     <p>Май{{ mtable.may }}</p>
-                    <p>Юни {{ mtable.june }}</p>
-                     <p>Юли {{ mtable.july }}</p>
-                    <p>Август {{ mtable.august }}</p>
-                     <p>Септември {{ mtable.sept }}</p>
-                    <p>Ноември {{mtable.oct }}</p>
-                     <p>Декември {{ mtable.nove }}</p>
+        </section>
 
+        <section>
+             <p>Февруари</p>
+            {% if mtable.feb == True %}
+                <button href="#" aria-checked="true">{{ checked }}</button>
+             {% else %}
+                <button href="#" aria-checked="true">{{ not_cheked }}</button>
+            {% endif %}
+        </section>
 
+        <section>
+            <p>Март</p>
+           {% if mtable.march == True %}
+                <button href="#" aria-checked="true">{{ checked }}</button>
+             {% else %}
+                <button href="#" aria-checked="true">{{ not_cheked }}</button>
+            {% endif %}
+        </section>
+
+        <section>
+            <p>Април</p>
+           {% if mtable.april == True %}
+                <button href="#" aria-checked="true">{{ checked }}</button>
+             {% else %}
+                <button href="#" aria-checked="true">{{ not_cheked }}</button>
+            {% endif %}
+        </section>
+
+        <section>
+        <p>Май</p>
+            {% if mtable.may == True %}
+                <button href="#" aria-checked="true">{{ checked }}</button>
+             {% else %}
+                <button href="#" aria-checked="true">{{ not_cheked }}</button>
+            {% endif %}
+        </section>
+
+        <section>
+            <p>Юни</p>
+           {% if mtable.june == True %}
+                <button href="#" aria-checked="true">{{ checked }}</button>
+             {% else %}
+                <button href="#" aria-checked="true">{{ not_cheked }}</button>
+            {% endif %}
+        </section>
+
+        <section>
+            <p>Юли</p>
+           {% if mtable.july == True %}
+                <button href="#" aria-checked="true">{{ checked }}</button>
+             {% else %}
+                <button href="#" aria-checked="true">{{ not_cheked }}</button>
+            {% endif %}
+        </section>
+
+        <section>
+            <p>Август</p>
+               {% if mtable.august == True %}
+                <button href="#" aria-checked="true">{{ checked }}</button>
+             {% else %}
+                <button href="#" aria-checked="true">{{ not_cheked }}</button>
+            {% endif %}
+        </section>
+
+        <section>
+            <p>Септември</p>
+               {% if mtable.sept == True %}
+                <button href="#" aria-checked="true">{{ checked }}</button>
+             {% else %}
+                <button href="#" aria-checked="true">{{ not_cheked }}</button>
+            {% endif %}
+        </section>
+
+        <section>
+             <p>Октомври</p>
+           {% if mtable.oct == True %}
+                <button href="#" aria-checked="true">{{ checked }}</button>
+             {% else %}
+                <button href="#" aria-checked="true">{{ not_cheked }}</button>
+            {% endif %}
+        </section>
+
+        <section>
+            <p>Ноември</p>
+           {% if mtable.nove == True %}
+                <button href="#" aria-checked="true">{{ checked }}</button>
+             {% else %}
+                <button href="#" aria-checked="true">{{ not_cheked }}</button>
+            {% endif %}
+        </section>
+
+        <section>
+            <p>Декември</p>
+           {% if mtable.dec == True %}
+                <button href="#" aria-checked="true">{{ checked }}</button>
+             {% else %}
+                <button href="#" aria-checked="true">{{ not_cheked }}</button>
+            {% endif %}
+        </section>
     </section>
         {% endfor %}
 </section>

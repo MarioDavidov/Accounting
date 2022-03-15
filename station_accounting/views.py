@@ -10,8 +10,8 @@ def home_page(request):
         context = {
             'form': AccForm(),
             'mtable': mtable,
-            'che': u'\u2705',
-            'not': u'\u274c',
+            'checked': u'\u2705',
+            'not_cheked': u'\u274c',
         }
         return render(request, 'home_page.html', context)
     else:
