@@ -17,3 +17,7 @@ class MonthTable(models.Model):
     nove = models.BooleanField(editable=True)
     dec = models.BooleanField(editable=True)
 
+
+class Kasa(models.Model):
+    kasa = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)
+    kasa_2 = models.FloatField(default=0.0)

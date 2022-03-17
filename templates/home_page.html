@@ -18,6 +18,21 @@
         </ul>
     </nav>
 </header>
+     <form  action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+        <section>decimal: {{ kasa_form.kasa }} lv.</section>
+         <section>floar: {{ kasa_form.kasa_2 }} lv.</section>
+         <input type="submit" value="Запази">
+         {% csrf_token %}
+
+     </form>
+<section>
+    {% for kesh in kasa_vsichki_tipove %}
+        <p>{{ kesh.kasa }}</p>
+        <p>{{ kesh.kasa_2 }}</p>
+    {% endfor %}
+</section>
+ <section>parata: {{funktion}} lv.</section>
+ <section>a brat {{ a }} lv.</section>
             <form class="form_section" action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
             <label for="name">Име {{ form.tittless }}</label><br>
             <br>
@@ -45,9 +60,9 @@
                 <br>
             <label class="inputs" for="mesec">Декември {{ form.dec }}</label><br>
 
-            <input type="submit" value="Запази">
-            {% csrf_token %}
 
+            {% csrf_token %}
+            <input type="submit" value="Запази сумите">
         </form>
 
 <section class="employee_list">
@@ -56,7 +71,7 @@
         <section class="month_section">
 
             <p class="employee_name">{{ mtable.tittless }}</p>
-        <section>
+        <section class="each_month">
             <p>Януари</p>
             {% if mtable.jan == True %}
                 <button href="#" aria-checked="true">{{ checked }}</button>
@@ -65,7 +80,7 @@
             {% endif %}
         </section>
 
-        <section>
+        <section class="each_month">
              <p>Февруари</p>
             {% if mtable.feb == True %}
                 <button href="#" aria-checked="true">{{ checked }}</button>
@@ -74,7 +89,7 @@
             {% endif %}
         </section>
 
-        <section>
+        <section class="each_month">
             <p>Март</p>
            {% if mtable.march == True %}
                 <button href="#" aria-checked="true">{{ checked }}</button>
@@ -83,7 +98,7 @@
             {% endif %}
         </section>
 
-        <section>
+        <section class="each_month">
             <p>Април</p>
            {% if mtable.april == True %}
                 <button href="#" aria-checked="true">{{ checked }}</button>
@@ -92,7 +107,7 @@
             {% endif %}
         </section>
 
-        <section>
+        <section class="each_month">
         <p>Май</p>
             {% if mtable.may == True %}
                 <button href="#" aria-checked="true">{{ checked }}</button>
@@ -101,7 +116,7 @@
             {% endif %}
         </section>
 
-        <section>
+        <section class="each_month">
             <p>Юни</p>
            {% if mtable.june == True %}
                 <button href="#" aria-checked="true">{{ checked }}</button>
@@ -110,7 +125,7 @@
             {% endif %}
         </section>
 
-        <section>
+        <section class="each_month">
             <p>Юли</p>
            {% if mtable.july == True %}
                 <button href="#" aria-checked="true">{{ checked }}</button>
@@ -119,7 +134,7 @@
             {% endif %}
         </section>
 
-        <section>
+        <section class="each_month">
             <p>Август</p>
                {% if mtable.august == True %}
                 <button href="#" aria-checked="true">{{ checked }}</button>
@@ -128,7 +143,7 @@
             {% endif %}
         </section>
 
-        <section>
+        <section class="each_month">
             <p>Септември</p>
                {% if mtable.sept == True %}
                 <button href="#" aria-checked="true">{{ checked }}</button>
@@ -137,7 +152,7 @@
             {% endif %}
         </section>
 
-        <section>
+        <section class="each_month">
              <p>Октомври</p>
            {% if mtable.oct == True %}
                 <button href="#" aria-checked="true">{{ checked }}</button>
@@ -146,7 +161,7 @@
             {% endif %}
         </section>
 
-        <section>
+        <section class="each_month">
             <p>Ноември</p>
            {% if mtable.nove == True %}
                 <button href="#" aria-checked="true">{{ checked }}</button>
@@ -155,7 +170,7 @@
             {% endif %}
         </section>
 
-        <section>
+        <section class="each_month">
             <p>Декември</p>
            {% if mtable.dec == True %}
                 <button href="#" aria-checked="true">{{ checked }}</button>
